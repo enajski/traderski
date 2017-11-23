@@ -6,3 +6,5 @@ require_relative '../traderski'
 client = Traderski.new
 
 binding.pry
+
+puts "bye!"
