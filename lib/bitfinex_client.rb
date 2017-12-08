@@ -100,7 +100,7 @@ class BitfinexTrader
     elsif buys.empty? && ((low / mid) <= (mid / high))
       puts "Nothing so far, huh?"
       puts "Price seems close to it's high point."
-      puts "Let wait."
+      puts "Let's wait."
       action = nil
     elsif (mid / average_price(buys)) <= 0.9
       puts "The current price #{mid} is less than x0.9 (x#{mid / average_price(buys)}) my average buy #{average_price(pair_history)}"
@@ -114,7 +114,7 @@ class BitfinexTrader
       amount = (symbol.fetch("minimum_order_size").to_f * 1.0).to_s
     else
       puts "The current price #{mid} is x#{mid / average_price(buys)} my average buy #{average_price(pair_history)}"
-      puts "Let wait."
+      puts "Let's wait."
       action = nil
     end
 
